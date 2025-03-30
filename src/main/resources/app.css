@@ -1,0 +1,41 @@
+.tab.not-done {
+    -fx-background-color: #FEDDB9;
+}
+
+.tab.done {
+    -fx-background-color: #DAEEC9;
+}
+
+.not-done > .title{
+    -fx-background-color: #FEDDB9;
+}
+
+.done > .title{
+    -fx-background-color: #DAEEC9;
+}
+
+/*
+.not-done > .title{
+    -fx-background-color: #FEDDB9;
+}
+
+.done > .title{
+    -fx-background-color: #DAEEC9;
+}
+
+
+.tab{
+   -fx-background-color: #DAEEC9;
+
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-radius: 10 10 0 0, 9 9 0 0, 8 8 0 0;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-radius: 9 9 0 0, 8 8 0 0;
+}
+
+*/
+

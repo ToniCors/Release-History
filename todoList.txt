@@ -1,0 +1,5 @@
+auto redeploy
+export
+colori
+aggiungere
+bordo visibile sulla prima tab quando si avvia
