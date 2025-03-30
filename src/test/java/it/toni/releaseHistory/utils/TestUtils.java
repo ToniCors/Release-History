@@ -26,8 +26,8 @@ public class TestUtils {
                 Step.builder().build());
     }
 
-    public static Serializable createMock(){
-        return buildRelease("0.4.0");
+    public static Serializable createMock(String releaseName){
+        return buildRelease(releaseName);
     }
 
     public static Release buildRelease(String name){

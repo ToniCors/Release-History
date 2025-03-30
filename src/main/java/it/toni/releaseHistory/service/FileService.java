@@ -1,8 +1,11 @@
 package it.toni.releaseHistory.service;
 
-import org.json.JSONObject;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import it.toni.releaseHistory.model.Release;
 
 import java.io.*;
+import java.util.List;
 
 public class FileService {
 
@@ -34,9 +37,13 @@ public class FileService {
         }
     }
 
-    public static String export(Serializable object) {
-        JSONObject jsonObject = new JSONObject(object);
-        return jsonObject.toString();
+    public static void exportJson(String filename, List<Release> object) throws IOException {
+        new ObjectMapper().writeValue(new File(filename), object);
+    }
+
+    public static List<Release> importJson(String filename) throws IOException {
+        return new ObjectMapper().readValue(new File(filename), new TypeReference<>() {
+        });
     }
 
 }

@@ -1,6 +1,7 @@
 package it.toni.releaseHistory.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class Task implements Serializable,ModelInterface {
     private List<Bug> bugs = new ArrayList<>();
     private String note = "";
 
+    @JsonIgnore
     @Override
     public boolean isDone() {
         boolean done = true;

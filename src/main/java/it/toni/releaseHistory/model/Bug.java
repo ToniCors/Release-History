@@ -1,5 +1,6 @@
 package it.toni.releaseHistory.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ public class Bug implements Serializable,ModelInterface {
     private String name;
     private List<Microservice> microservices = new ArrayList<>();
 
+    @JsonIgnore
     @Override
     public boolean isDone() {
         boolean done = true;

@@ -1,5 +1,6 @@
 package it.toni.releaseHistory.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,11 +11,12 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Release implements Serializable,ModelInterface {
+public class Release implements Serializable, ModelInterface {
 
     private String name;
     private List<Task> tasks;
 
+    @JsonIgnore
     @Override
     public boolean isDone() {
         boolean done = true;
